@@ -1,22 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/output.css">
-    <title>Projet-Tailwind-ODC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactez-nous - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
-    <!--Entête des différentes pages-->
-    <header class="bg-gray-800 text-white px-6 py-4 flex items-center justify-between">
-    <a href="/index.html">
-      <img src="/src/images_apprenants/xalil2.png" alt="Logo du Portfolio" class="w-16 h-16 rounded-full object-cover">
+
+  <!-- Header -->
+  <header class="bg-gray-800 text-white px-6 py-4 flex items-center justify-between">
+    <a href="../index.html">
+      <img src="listes-projets/img/logo.jpeg" alt="Logo du Portfolio" class="w-16 h-16 rounded-full object-cover">
     </a>
     <nav class="bg-gray-700 px-6 py-2 rounded-xl flex gap-8">
-      <a href="html-pages/lister-projet.html" class="text-white text-lg hover:text-green-400 transition-colors">Liste</a>
-      <a href="/Pages_html/ajout-projet.html" class="text-white text-lg hover:text-green-400 transition-colors">Ajouter</a>
-      <a href="/Pages_html/contact.html" class="text-white text-lg hover:text-green-400 transition-colors">Contact</a>
+      <a href="lister-projet.html" class="text-white text-lg hover:text-green-400 transition-colors">Liste</a>
+      <a href="ajouter-projet.html" class="text-white text-lg hover:text-green-400 transition-colors">Ajouter</a>
+      <a href="#" class="text-green-400 text-lg font-semibold">Contacts</a>
     </nav>
   </header>
+
+  <!-- Main -->
+  <main class="max-w-2xl mx-auto my-8 p-6 bg-white rounded-xl shadow-md">
+
+    <div class="mb-4">
+      <a href="../index.html" class="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+        🔙 Retour à l'accueil
+      </a>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Contactez-nous</h2>
+
+    <form id="contactForm" class="flex flex-col gap-4">
+
+      <div class="flex flex-col gap-1">
+        <label for="name" class="text-sm font-semibold text-gray-700">Nom :</label>
+        <input type="text" id="name" name="name" required
+          class="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 w-full">
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <label for="email" class="text-sm font-semibold text-gray-700">Email :</label>
+        <input type="email" id="email" name="email" required
+          class="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 w-full">
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <label for="message" class="text-sm font-semibold text-gray-700">Message :</label>
+        <textarea id="message" name="message" required rows="5"
+          class="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 w-full resize-none"></textarea>
+      </div>
+
+      <div class="flex justify-center gap-16 pt-4">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+          Envoyer
+        </button>
+        <button type="reset" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+          Annuler
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+    <p>&copy; 2026 G4 Fullstack Portfolio</p>
+  </footer>
+
 </body>
 </html>
